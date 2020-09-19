@@ -13,55 +13,48 @@
     </style>
     <meta charset="UTF-8">
     <title>ПдИ</title>
-    <div style="width: 690px">
-        <div style="display: flex;">
-            <a href="#">
-                Войти
-            </a>
-            &nbsp;|&nbsp;
-            <a href="#">
-                Новая запись
-            </a>
-            &nbsp;|&nbsp;
-            <a href="email.php">
-                Отправить сообщение
-            </a>
-            &nbsp;|&nbsp;
-            <a href="#">
-                Фото
-            </a>
-            &nbsp;|&nbsp;
-            <a href="#">
-                Файлы
-            </a>
-            &nbsp;|&nbsp;
-            <a href="#">
-                Администратору
-            </a>
-            &nbsp;|&nbsp;
-            <a href="#">
-                Информация
-            </a>
-            &nbsp;|&nbsp;
-            <a href="#">
-                Выйти
-            </a>
-        </div>
-        <hr>
-        <?php
-        require_once("connection/MySiteDB.php");
+    <?php
+    $pages = [
+        ['name' => 'Войти', 'link' => '#'],
+        ['name' => 'Новая запись', 'link' => 'newnote.php'],
+        ['name' => 'Отправить сообщение', 'link' => 'email.php'],
+        ['name' => 'Фото', 'link' => '#'],
+        ['name' => 'Файлы', 'link' => '#'],
+        ['name' => 'Администратору', 'link' => '#'],
+        ['name' => 'Информация', 'link' => '#'],
+        ['name' => 'Выйти', 'link' => '#']
+    ];
 
-        $select_note = mysqli_query($link, "SELECT * FROM notes");
-        while ($note = mysqli_fetch_array($select_note)){
-            echo $note['id'], "<br>";
-            ?>
-            <a href="comments.php?note=<?php echo $note['id']; ?>">
-                <?php echo $note ['title'], "<br>";?></a>
-            <?php
-            echo $note ['created'], "<br>";
-            echo $note ['content'], "<br>";
+    echo '<div style="max-width: 940px">
+            <div>';
+    foreach ($pages as $key => $page) {
+        if ($key+1 != count($pages)){
+            echo '<a href=' . $page['link'] . '>
+                ' . $page['name'] . '
+            </a>&nbsp;|&nbsp';
         }
+        else {
+            echo '<a href=' . $page['link'] . '>
+                ' . $page['name'] . '
+            </a>';
+        }
+    }
+    echo '</div>
+        <hr>';
+
+    require_once("connection/MySiteDB.php");
+
+    $select_note = mysqli_query($link, "SELECT * FROM notes ORDER BY notes.id DESC");
+    while ($note = mysqli_fetch_array($select_note)) {
+        echo $note['id'], "<br>";
         ?>
+        <a href="comments.php?note=<?php echo $note['id']; ?>">
+            <?php echo $note ['title'], "<br>"; ?></a>
+        <?php
+        echo $note ['created'], "<br>";
+        echo $note ['content'], "<br>";
+    }
+    ?>
 
     </div>
 </head>

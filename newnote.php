@@ -23,7 +23,7 @@ $select_db = mysqli_select_db($link, $db);
 //Получение данных из формы
 $title = $_POST['title'];
 $created = $_POST['created'];
-$article = $_POST[‘article’];
+$article = $_POST['article'];
 if (($title) && ($created) && ($article)) {
 //Формирование запроса
     $query = "INSERT INTO notes (title, created, article) VALUES ('$title', '$created', '$article')";
