@@ -3,10 +3,10 @@
 # Type="MYSQL"
 # HTTP="true"
 $localhost = 'localhost';
-$db = 'mySiteDB';
+$db = 'MySiteDB';
 $user = 'root';
-$password = 'ZXC123zxc';
-$link = mysqli_connect($localhost, $user, $password, $db);
+$password = 'root';
+$link = mysqli_connect($localhost, $user, $password, $db, 8889);
 //trigger_error(mysql_error(), E_USER_ERROR);
 //trigger_error выводит на страницу сообщение об ошибке. Первый параметр
 //- сообщение об ошибке
@@ -20,10 +20,10 @@ $link = mysqli_connect($localhost, $user, $password, $db);
 mysqli_query($link, "SET NAMES cp1251;");// or die(mysql_error());
 mysqli_query($link, "SET CHARACTER SET cp1251;");// or die(mysql_error());
 
-echo "here09876";
-$query = "SELECT * FROM notes WHERE ";
-$query1 = mysqli_query($link, $query);
-echo $query1;
+//echo "here09876";
+$query = "SELECT * FROM notes";
+$query1 = mysqli_query($link, $query) or die("Mysql error: " . mysqli_error($link));;
+echo "here1234";
 //$newArray = mysqli_fetch_array($query1);
 while ($note = mysqli_fetch_array($query1)){
     echo $note ['id'], "<br>";

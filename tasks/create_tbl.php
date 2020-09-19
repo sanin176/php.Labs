@@ -1,6 +1,6 @@
 <?php
 //Соединение с сервером
-$link = mysqli_connect('localhost', 'root', 'ZXC123zxc');
+$link = mysqli_connect('localhost', 'root', 'root', null, 8889);
 //Выбор БД
 $db = "MySiteDB";
 $select = mysqli_select_db($link, $db);
