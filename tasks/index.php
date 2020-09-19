@@ -25,5 +25,7 @@ $q += $w;
 $w = $q - $w;
 $q -= $w;
 echo sprintf('AFTER: q: %d w: %d </br>', $q, $w);
+
+require_once ("blog.php");
 ?>
 </BODY>

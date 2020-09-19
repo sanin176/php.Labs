@@ -1,6 +1,6 @@
 <?php
 //Создать соединение с сервером
-$link = mysqli_connect("localhost", "root", "");
+$link = mysqli_connect("localhost", "root", "ZXC123zxc");
 if ($link) {
     echo "Соединение с сервером установлено", "<br>";
 } else {
@@ -17,6 +17,6 @@ $create_db = mysqli_query($link, $query);
 if ($create_db) {
     echo "База данных $db успешно создана";
 } else {
-    echo "База не создана";
+    echo "\nБаза не создана";
 }
 ?>

@@ -1,8 +1,8 @@
 <?php
 //Соединение с сервером
-$link = mysqli_connect('localhost', 'root', '');
+$link = mysqli_connect('localhost', 'root', 'ZXC123zxc');
 //Выбор БД
-$db = "mySiteDB";
+$db = "MySiteDB";
 $select = mysqli_select_db($link, $db);
 if ($select) {
     echo "База успешно выбрана", "<br>";
