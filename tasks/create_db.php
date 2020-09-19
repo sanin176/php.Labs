@@ -1,6 +1,6 @@
 <?php
 //Создать соединение с сервером
-$link = mysqli_connect("localhost", "root", "ZXC123zxc");
+$link = mysqli_connect("localhost", "root", "root", null, 8889);
 if ($link) {
     echo "Соединение с сервером установлено", "<br>";
 } else {

@@ -22,7 +22,7 @@
                 Новая запись
             </a>
             &nbsp;|&nbsp;
-            <a href="#">
+            <a href="email.php">
                 Отправить сообщение
             </a>
             &nbsp;|&nbsp;
