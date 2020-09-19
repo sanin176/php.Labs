@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="158211b1-edc4-4acc-9003-8e840d6944e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tasks/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/MySiteDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/MySiteDB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/create_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/create_db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/create_tbl.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/create_tbl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/MySiteDB.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/blog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/create_db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/create_tbl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/email.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/inform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/task1.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
