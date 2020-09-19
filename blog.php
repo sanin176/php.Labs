@@ -5,6 +5,7 @@
         em div {
             margin: 10px 0;
         }
+
         a {
             color: black;
             text-decoration: none;
@@ -22,7 +23,7 @@
                 Новая запись
             </a>
             &nbsp;|&nbsp;
-            <a href="#">
+            <a href="email.php">
                 Отправить сообщение
             </a>
             &nbsp;|&nbsp;
@@ -47,14 +48,21 @@
             </a>
         </div>
         <hr>
-        <div>
-            <em>
-                <div>Рад приветствовать вас<br></div>
-                <div>на страницах моего сайта, посвященного путешествия!<br></div>
-                <div>Здесь я буду рассказывать о своих путешествия...<br></div>
-                <div>... и выкладывать разные интересные материалы!</div>
-            </em>
-        </div>
+        <?php
+        require_once("connection/MySiteDB.php");
+
+        $select_note = mysqli_query($link, "SELECT * FROM notes");
+        while ($note = mysqli_fetch_array($select_note)){
+            echo $note['id'], "<br>";
+            ?>
+            <a href="comments.php?note=<?php echo $note['id']; ?>">
+                <?php echo $note ['title'], "<br>";?></a>
+            <?php
+            echo $note ['created'], "<br>";
+            echo $note ['content'], "<br>";
+        }
+        ?>
+
     </div>
 </head>
 <body>
