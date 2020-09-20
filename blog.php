@@ -43,7 +43,6 @@
         <hr>';
 
     require_once("connection/MySiteDB.php");
-    require_once("files.php");
 
     $select_note = mysqli_query($link, "SELECT * FROM notes ORDER BY notes.id DESC");
     while ($note = mysqli_fetch_array($select_note)) {

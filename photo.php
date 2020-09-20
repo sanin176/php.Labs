@@ -1,7 +1,7 @@
 <?php
 //Получаем полный путь к папке, где хранятся графические файлы
 $image_dir_path = $_SERVER['DOCUMENT_ROOT'] . "/photo";// /Users/aleksandrzditovec/PhpstormProjects/labs
-echo "Your path -> ".$image_dir_path;
+echo "Your path -> " . $image_dir_path;
 //Запускаем просмотр папки. Функция opendir() возвращает идентификатор //папки
 $image_dir_id = opendir($image_dir_path);
 //$array_files - массив, в который будут помещаться все найденные файлы
@@ -52,8 +52,6 @@ if ($submit) {
 }
 ?>
 
-
-<hr>
 <?php
 //Получаем количество элементов массива $array_files, т.е. количество //найденных файлов.
 $array_files_count = count($array_files);
@@ -70,15 +68,15 @@ if ($array_files_count) {
     <hr/>
 <?php }
 ?>
-<hr>
 
 
 <!-- Форма для удаления файла с сервера -->
 <form name="file_delete" method="post"
-      enctype="application/x-www-form-urlencoded"> Файл <select name = "file_delete" size="1">
-        <?php for ($i=0; $i<$array_files_count; $i++) { ?> <option><?php echo $array_files[$i]; ?></option>
+      enctype="application/x-www-form-urlencoded"> Файл <select name="file_delete" size="1">
+        <?php for ($i = 0; $i < $array_files_count; $i++) { ?>
+            <option><?php echo $array_files[$i]; ?></option>
         <?php } ?></select>
-    <input type="submit" name="submit" value="Удалить" />
+    <input type="submit" name="submit" value="Удалить"/>
 </form>
 
 <?php
@@ -86,12 +84,12 @@ if ($array_files_count) {
 //Сначала проверяем, было ли запущено удаление файла if (isset($_POST["file_delete"]))
 {
     //Формируем полное имя файла
-$file_name = $_SERVER['DOCUMENT_ROOT'] . "/photo/".$_POST["file_delete"];
+    $file_name = $_SERVER['DOCUMENT_ROOT'] . "/photo/" . $_POST["file_delete"];
 //Функция unlink() удаляет файл
+
     unlink($file_name);
 }
 ?>
-
 
 
 <br>

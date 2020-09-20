@@ -53,7 +53,6 @@ if ($submit) {
 ?>
 
 
-<hr>
 <?php
 //Получаем количество элементов массива $array_files, т.е. количество //найденных файлов.
 $array_files_count = count($array_files);
@@ -69,7 +68,6 @@ if ($array_files_count) {
     <hr/>
 <?php }
 ?>
-<hr>
 
 
 <!-- Форма для удаления файла с сервера -->

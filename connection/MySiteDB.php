@@ -3,7 +3,7 @@
 $localhost = 'localhost';
 $db = 'mySiteDB';
 $user = 'root';
-$password = 'root';
+$password = '';
 $link = mysqli_connect($localhost, $user, $password, $db);
 
 mysqli_query($link, "SET NAMES cp1251;");// or die(mysql_error());
